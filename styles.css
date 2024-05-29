@@ -218,15 +218,6 @@ h6 {
     overflow-x: hidden;
   }
 
-  .inputBox .password {
-    width: 70%;
-    font-family: inherit;
-    font-size: 1rem;
-    font-weight: 600;
-    transition: all 0.2s ease-in-out;
-    border: none;
-  }
-
   p {
     justify-content: center;
   }
@@ -238,4 +229,12 @@ input::placeholder {
 
 input.error::placeholder {
   color: var(--red);
+}
+.container-text{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
 }
