@@ -3,20 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
     <title>Frontend Mentor | Intro component with sign up form</title>
     <link rel="stylesheet" href="./styles.css" />
     <script src="https://kit.fontawesome.com/ac10b9f87a.js" crossorigin="anonymous"></script>
     <script src="./app.js" defer></script>
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
     <main class="container">
@@ -31,38 +22,43 @@
       <div class="container-form">
         <h4>Try it free 7 days<span> then $20/mo. thereafter</span></h4>
         <form action="" id="form" name="form" onsubmit="return validateForm()">
-
           <label for="firstName">
             <input type="text" class="firstName" placeholder="First Name"/>
-            <h5 id="firstErr">First name cannot be empty </h5>
+            <h5 id="firstErr">First name cannot be empty</h5>
             <div class="Error" id="FnameErr"></div>
           </label>
 
           <label for="lastName">
             <input type="text" class="lastName" placeholder="Last Name" />
-            <h5 id="lastErr">Last name cannot be empty </h5>
-           <div class="Error" id="LnameErr"></div>
+            <h5 id="lastErr">Last name cannot be empty</h5>
+            <div class="Error" id="LnameErr"></div>
           </label>
 
           <label for="email">
-            <input type="email" class="email" placeholder="Email" />
-            <h5 class="emailErr">email cannot be empty </h5>
+            <input type="email" class="email" placeholder="Email" id="email" />
+            <h5 id="emailErr">Looks like this is not an email</h5>
             <div class="Error" id="emailErr"></div>
           </label>
 
-          <div class="inputBox">
+          <div class="inputBox" id="passwordDiv">
             <div class="pee">
               <label for="password">
-                <input type="password" class="password" placeholder="Password" id="password"  />
+                <input type="password" class="password" placeholder="Password" id="password" />
+              </label>
             </div>
-              <div class="see"><img src="./images/closed eye.png" width="28px" class="eye" id="eyeicon" ></div>
+            <div class="see">
+              <i class="fas fa-eye-slash" id="eyeicon" style="font-size: 20px; cursor: pointer;"></i>
+            </div>
           </div>
-              <h5 id="PWErr">Password cannot be empty </h5>
-              <div class="Error" id="PasswordErr"></div>
-            </label>
 
-          <button id="button" value="submit" onclick="toggleVisibility()">Claim your free trial</button>
-          <p style="color: hsl(246, 25%, 77%); text-align: center; font-size: 1rem;" >By clicking the button, you are agreeing to our <span style="color: hsl(0, 100%, 74%)"> Terms and Services</span></p>
+          <h5 id="PWErr">Password cannot be empty</h5>
+          <div class="Error" id="PasswordErr"></div>
+
+          <button id="button" value="submit">Claim your free trial</button>
+          <p style="color: hsl(246, 25%, 77%); text-align: center; font-size: 1rem;">
+            By clicking the button, you are agreeing to our 
+            <span style="color: hsl(0, 100%, 74%)"> Terms and Services</span>
+          </p>
         </form>
       </div>
     </main>
